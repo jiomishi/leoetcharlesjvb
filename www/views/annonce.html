@@ -1,0 +1,100 @@
+<ion-view>
+	
+	<ion-content class="has-header has-subheader gris">
+ 
+		<div class="row">
+			<h5 class="titre">Conseiller Client Particulier</h5>
+		</div>
+		
+		<div class="row row-center">
+		
+			<div class="col divimg">
+				<img class="imgcmne" src="img/imgAnnonce.png">
+			</div>
+			
+		</div>
+		
+		<div class="divDetOffre">
+			<div class="row">
+				<button class="button button-icon ion-chevron-down" onclick="masquer_div('voirDetail','barre');" ></button>
+				<h5 class="detailOffre">Détail de l'offre</h5>
+			</div>
+			
+			<hr id="barre"/>
+			
+			<div id="voirDetail">
+			   Mission Principale </br>
+			   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras erat lorem, tincidunt eu porta posuere, volutpat in sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque sit amet consectetur ligula, ac ullamcorper magna. Sed mi massa, pretium id enim quis, feugiat aliquet mi. Phasellus pharetra ex eu magna posuere suscipit. Integer dignissim dictum ante. Morbi lacinia enim id ante faucibus, sollicitudin suscipit magna posuere.</br></br>
+			   Etiam quis mauris vel sapien tempus molestie sit amet vel libero. In tempor viverra mauris, nec pulvinar magna laoreet id. Sed cursus libero turpis, nec pellentesque ante lacinia vel. Vivamus vestibulum, lacus ac ornare fringilla, tellus tellus semper odio, at gravida sapien leo eu lorem. Cras rutrum dolor nec nunc luctus, porttitor tristique nibh consequat. Vivamus pharetra nunc suscipit fermentum fringilla. Morbi arcu velit, tincidunt ultricies odio ut, mattis vehicula neque. Duis in arcu eros. Morbi consequat auctor metus, eget blandit elit hendrerit et. Quisque a neque nulla. Nullam in mauris euismod, porta neque at, lobortis nisi. Proin nec metus congue, faucibus arcu sed, pharetra nisi. Nullam faucibus, nisl id condimentum ultricies, nulla metus tempor diam, et venenatis dui ex sed massa. Donec mattis bibendum nunc, at gravida ipsum malesuada vitae. In nec velit sit amet lorem ullamcorper accumsan. Nulla elit lectus, finibus a sapien ac, euismod vehicula justo.
+			</div>
+			
+			<div class="row">
+
+				<a class="lienOption" href="#">
+					<div class="optionAcc">
+						<p>Sauvegarder</p>
+					</div>
+				</a>
+				
+				<a class="lienOption" href="#">
+					<div class="optionAcc">
+						<p>Partager</p>
+					</div>
+				</a>
+				
+				<a class="lienOption" href="#/postuler">
+					<div class="optionViolet">
+						<p>Postuler</p>
+					</div>
+				</a>
+				
+			</div>
+		
+		</div>
+		
+		<div class="row ">
+		
+			<div class="col col-10">
+			</div>
+			
+			<div class="col col-80">
+				<div class="button-bar">
+				  <a class="button button-small barBoutton BtnAcc">Offres similaires</a>
+				  <a class="button button-small barBoutton BtnViolet" >Offres autour de moi</a>
+				</div>
+			</div>
+			
+			<div class="col col-10">
+			</div>
+			
+		</div> 
+		
+		<ion-scroll direction="x" class="noScroll" scrollbar-x="false">
+		
+            <div class="row">
+			
+                <div class="divOffre col col-75"><a class="lienAnnonce">
+                    <div class="row">
+                        <div class="col col-90"><p>Conseiller Client Particulier</br><span class="opaGris">Poste basé à Lille</span></p></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+					</div>	</a>
+                </div>
+				
+				<div class="divOffre col col-75">
+                    <div class="row">
+                        <div class="col col-90"><p>Conseiller Gestion</br><span class="opaGris">Poste basé à Lens</span></p></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+                    </div>
+                </div>
+				
+            </div>
+			
+        </ion-scroll>
+
+		<div class="row">
+			<h5 class="travCmne">Travailler au Crédit Mutuel Nord Europe</h5>
+		</div>
+
+	</ion-content>
+	
+</ion-view>
