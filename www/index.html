@@ -29,6 +29,10 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+
+
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -40,20 +44,21 @@
   </head>
   
   <body ng-app="starter">
- <ion-nav-bar></ion-nav-bar>
  
-	<ion-nav-bar  align-title="center" class="bar bar-header mynavbar">
-		
-		<img class="icon-Socmne" src="img/icon.jpg" />
-		<div class="nav-header" ng-click="doTheBack()">Reverse!</div>
-		
+    <ion-header-bar align-title="center" class="bar bar-header mynavbar" ng-controller="MyController">
+	
+		<div class="img-with-text">
+			<img class="icon-Socmne" src="img/icon.jpg">
+			<button class="button button-navbar button-icon ion-ios-arrow-left"></button>
 		</div>
-		<p class="title" >{{title}}</p>
-		<button class="button button-navbar2 button-icon ion-navicon"></button>	
-	</ion-nav-bar>
-
-
+		
+		<p class="title">Bienvenue</p>
+		<button class="button button-navbar2 button-icon ion-navicon" ng-click="modal.show()"></button>
+		
+	</ion-header-bar>
+  
     <ion-nav-view>
+		<div id="shadowing"></div>
 	</ion-nav-view>
   
   </body>

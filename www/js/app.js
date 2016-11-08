@@ -5,9 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
-
-
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,9 +20,44 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    
+
+    if(window.Connection) {
+                if(navigator.connection.type == Connection.NONE) {
+                    $ionicPopup.confirm({
+                        title: "Internet Disconnected",
+                        content: "The internet is disconnected on your device."
+                    })
+                    .then(function(result) {
+                        if(!result) {
+                            ionic.Platform.exitApp();
+                        }
+                    });
+                }
+            }
   });
 })
+/*
 
+    .run(function($ionicPlatform, $ionicPopup) {
+        $ionicPlatform.ready(function() {
+            if(window.Connection) {
+                if(navigator.connection.type == Connection.NONE) {
+                    $ionicPopup.confirm({
+                        title: "Internet Disconnected",
+                        content: "The internet is disconnected on your device."
+                    })
+                    .then(function(result) {
+                        if(!result) {
+                            ionic.Platform.exitApp();
+                        }
+                    });
+                }
+            }
+        });
+    })
+
+*/
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -46,6 +79,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       templateUrl: 'views/annonce.html'
     })
 	
+	.state('testWS', {
+      url: '/testWS',
+      templateUrl: 'views/testWS.html'
+    })
+
+  .state('toutesLesAnnonces', {
+      url: '/toutesLesAnnonces',
+      templateUrl: 'views/toutesLesAnnonces.html'
+    })
+
+  .state('recherche', {
+      url: '/recherche',
+      templateUrl: 'views/recherche.html'
+    })
+	
   .state('accueil', {
     url: '/accueil',
     templateUrl: 'views/accueil.html'
@@ -57,5 +105,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 });
 
-	
+
 

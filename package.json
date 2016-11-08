@@ -1,7 +1,7 @@
 {
-  "name": "cmne",
+  "name": "cmne2",
   "version": "1.1.1",
-  "description": "cmne: An Ionic project",
+  "description": "cmne2: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",

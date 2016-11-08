@@ -1,6 +1,6 @@
 <ion-view>
 	
-	<ion-content class="has-header has-subheader gris">
+	<ion-content class="has-header has-subheader gris" ng-controller="changer">
  
 		<div class="row">
 			<h5 class="titre">Conseiller Client Particulier</h5>
@@ -16,8 +16,8 @@
 		
 		<div class="divDetOffre">
 			<div class="row">
-				<button class="button button-icon ion-chevron-down" onclick="masquer_div('voirDetail','barre');" ></button>
-				<h5 class="detailOffre">Détail de l'offre</h5>
+				<a onclick="masquer_div('voirDetail','barre');"><img class="icon-Socmne" src="img/detail-button.png" /></a>
+				<h5 class="detailOffre">Détails de l'offre</h5>
 			</div>
 			
 			<hr id="barre"/>
@@ -31,19 +31,27 @@
 			<div class="row">
 
 				<a class="lienOption" href="#">
+					
 					<div class="optionAcc">
+						<img class="icon-Socmne imgNonActif" src="img/sauvgarde-button.png" />
+						<img class="icon-Socmne imgActif" src="img/sauvgarde-butto-active.png" />
 						<p>Sauvegarder</p>
 					</div>
 				</a>
 				
 				<a class="lienOption" href="#">
 					<div class="optionAcc">
+						<img class="icon-Socmne imgNonActif" src="img/partage-button.png" />
+						<img class="icon-Socmne imgActif" src="img/partage-button-active.png" />
 						<p>Partager</p>
 					</div>
 				</a>
 				
 				<a class="lienOption" href="#/postuler">
-					<div class="optionViolet">
+					
+					<div class="optionAcc">
+						<img class="icon-Socmne imgNonActif" src="img/postuler-button.png" />
+						<img class="icon-Socmne imgActif" src="img/postuler-button-active.png" />
 						<p>Postuler</p>
 					</div>
 				</a>
@@ -58,9 +66,9 @@
 			</div>
 			
 			<div class="col col-80">
-				<div class="button-bar">
-				  <a class="button button-small barBoutton BtnAcc">Offres similaires</a>
-				  <a class="button button-small barBoutton BtnViolet" >Offres autour de moi</a>
+				<div class="button-bar" ng-class="class">
+				  <a class="button button-small barBoutton {{ class.class1 }}" ng-click="changeClass()" onclick="afficherdiv2('div4','div5');">Offres similaires</a>
+				  <a class="button button-small barBoutton {{ class.class2 }}" ng-click="changeClass()" onclick="afficherdiv2('div5','div4');"> Offres autour de moi</a>
 				</div>
 			</div>
 			
@@ -69,7 +77,7 @@
 			
 		</div> 
 		
-		<ion-scroll direction="x" class="noScroll" scrollbar-x="false">
+		<ion-scroll direction="x" class="noScroll" id="div4" scrollbar-x="false">
 		
             <div class="row">
 			
@@ -83,6 +91,28 @@
 				<div class="divOffre col col-75">
                     <div class="row">
                         <div class="col col-90"><p>Conseiller Gestion</br><span class="opaGris">Poste basé à Lens</span></p></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+                    </div>
+                </div>
+				
+            </div>
+			
+        </ion-scroll>
+		
+		<ion-scroll direction="x" class="noScroll" id="div5" scrollbar-x="false">
+		
+            <div class="row">
+			
+                <div class="divOffre col col-75"><a class="lienAnnonce">
+                    <div class="row">
+                        <div class="col col-90"><p>Conseiller (autour de moi)</br><span class="opaGris">Poste basé à Lille</span></p></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+					</div>	</a>
+                </div>
+				
+				<div class="divOffre col col-75">
+                    <div class="row">
+                        <div class="col col-90"><p>Conseiller (autour de moi)</br><span class="opaGris">Poste basé à Lens</span></p></div>
 						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
                     </div>
                 </div>

@@ -1,6 +1,23 @@
 /*Page complete*/
+.caroustyle{
+	width:50%;
+	height:auto;
+	margin-left:2%;
+	margin-top:1%;
+	text-align: center;
+}
+
+
 .gris{
 	background-color:#f4f6f5;
+}
+
+/*zone de recherche*/
+.zoneRecherche
+{
+padding-right:5%;
+width:100%;
+padding-left:5%;
 }
 
 
@@ -34,22 +51,22 @@
 
 
 /*Barre de boutons*/ 
-.BtnAcc{
-	background-color:#792051;
-	color:white;
-}
-
-.BtnAcc:hover{
-	background-color:#792051;
-	color:white;
-}
-
 .BtnViolet{
+	background-color:#792051;
+	color:white;
+}
+
+.BtnViolet:hover{
+	background-color:#792051;
+	color:white;
+}
+
+.BtnAcc{
 	 color:#792051;
 	 border-color:#792051;
 }
 
-.BtnViolet:hover{
+.BtnAcc:hover{
 	 color:#792051;
 }
 
@@ -162,7 +179,8 @@ input::-moz-placeholder {
 
 .divDetOffre{
 	margin-left:5%;
-	padding:5%;
+	padding-right:5%;
+	padding-left:5%;
 	width:90%;
 	background-color:white;
 }
@@ -172,7 +190,6 @@ input::-moz-placeholder {
 }
 
 #barre{
-	color:grey;
 	width:90%;
 	opacity:0.7;
 }
@@ -180,8 +197,6 @@ input::-moz-placeholder {
 	text-align:center;
 	color:black;
 	border-radius:5px;
-	padding-top:10px;
-	padding-bottom:10px;/*a changer une fois image mise*/
 }
 
 .optionViolet{
@@ -197,7 +212,8 @@ input::-moz-placeholder {
 	text-decoration:none;
 	color:black;
 	width:30%;
-	margin:3%;
+	margin-right:3%;
+	margin-left:3%;
 }
 
 .travCmne{
@@ -232,16 +248,18 @@ input::-moz-placeholder {
 .has-header{
   top:80px 
 }
+
 .icon-Socmne{
     height: 25px;
 	margin-left: 5px;
 	margin-top: 5px;
 }
+
 .button-navbar {
 	color:#ffffff;
 	margin-top:5px;
-	
 }
+
 .button-navbar2 {
 	color:#ffffff;
 	margin-top:35px;
@@ -285,9 +303,6 @@ input::-moz-placeholder {
 	border-radius:30px 30px 0px 0px;
 	
 }
-
-
-
 
 
 .validation_button{
@@ -389,3 +404,130 @@ ul > li > span{
 	font-family: 'Comic Neue', sans-serif;
 	font-style:italic
 }
+
+.imgActif{
+	display:none;
+}
+
+.lienOption :hover{
+	text-align:center;
+	color:white;
+	border-radius:5px;
+	background-color: #792051;
+}
+
+.lienOption :hover .imgActif{
+	display: inline-block;
+}
+
+.lienOption :hover .imgNonActif{
+	display: none;
+}
+
+#div2{
+display:none;
+}
+
+#div3{
+display:none;
+}
+
+#div5{
+display:none;}
+
+/*gestion du modal*/
+.configModal{
+	width:60%;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slideInSmooth {
+  0% {
+    -webkit-transform: translate3d(220%,0,0);
+  }
+  100% {
+    -webkit-transform: translate3d(70%,0,0);
+  }
+}
+
+.slide-in{
+   -webkit-animation: slideInSmooth ease-in 1; 
+  animation: slideInSmooth ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 100ms;
+  animation-duration: 100ms;
+}
+
+.contenuModal a{
+	text-decoration:none;
+}
+
+.contenuModal ul{
+	width:100%;
+	text-align:right;
+	margin-bottom:5%;
+	padding-right:10%;
+}
+
+.contenuModal li{
+	color:black;
+	padding:2%;
+}
+
+.contenuModal h4{
+	width:100%;
+	color:grey;
+	text-align:right;
+	margin-top:15%;
+	margin-bottom: 0px;
+	padding-right:10%;
+}
+
+.contenuModal{
+	background-color:white;
+}
+
+.hrbarre{
+	width:70%;
+	float:right;
+	margin-right:5%;
+	background-color: #792051;
+	height:1px;
+	opacity:0.6;
+}
+
+
+.icon-left{
+	position:absolute;}
+
+/*grisement fond non actif encore*/ 
+#shadowing
+{
+ margin-top: 80px;
+ display:none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  z-index:10;
+  opacity:0.5;
+  filter: alpha(opacity=50);
+}
+
+
+
+
+
+
+

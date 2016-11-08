@@ -1,21 +1,24 @@
+
+
 <ion-view>
-	<ion-content class="has-header has-subheader gris">
+
+	<ion-content class="has-header has-subheader gris" ng-controller="changerAccueil">
 		<div class="row">
-			<div class="button-bar">
-			  <a class="button button-small barBoutton BtnAcc">Nouvelles offres</a>
-			  <a class="button button-small barBoutton BtnViolet">Mes annonces</a>
-			  <a class="button button-small barBoutton BtnViolet">Mes candidatures</a>
+			<div class="button-bar" ng-class="class">
+			  <a class="button button-small barBoutton {{ class.class1 }}" ng-click="changeClass1()" onclick="afficherdiv1('div1','div2','div3');">Nouvelles offres</a>
+			  <a class="button button-small barBoutton {{ class.class2 }}" ng-click="changeClass2()" onclick="afficherdiv1('div2','div1','div3');">Mes annonces</a>
+			  <a class="button button-small barBoutton {{ class.class3 }}" ng-click="changeClass3()" onclick="afficherdiv1('div3','div1','div2');">Mes candidatures</a>
 			</div>
 		</div> 
 		
-		<ion-scroll direction="x" class="noScroll" scrollbar-x="false">
+		<ion-scroll direction="x" class="noScroll" id="div1" scrollbar-x="false">
 		
             <div class="row">
 			
                 <div class="divOffre col col-75"><a class="lienAnnonce" href="#/annonce">
                     <div class="row">
                         <div class="col col-90"><p>Conseiller Client Particulier</br><span class="opaGris">Poste basé à Lille</span></p></div>
-						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris test"></i></div>
 					</div>	</a>
                 </div>
 				
@@ -36,17 +39,64 @@
             </div>
 			
         </ion-scroll>
-
-		<div class="row">
 		
-			<label class="item-input">
+		<ion-scroll direction="x" class="noScroll" id="div2" scrollbar-x="false">
+		
+            <div class="row">
 			
-			<div class="col col-70">
+                <div class="divOffre col col-75"><a class="lienAnnonce" href="#/annonce">
+                    <div class="row">
+                        <div class="col col-90"><p>Conseiller (mes annonces)</br><span class="opaGris">Poste basé à Lille</span></p></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+					</div>	</a>
+                </div>
+				
+				<div class="divOffre col col-75"><a class="lienAnnonce" href="#/annonce">
+                    <div class="row">
+                        <div class="col col-90"><p>Conseiller (mes annonces)</br><span class="opaGris">Poste basé à Lille</span></p></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+					</div>	</a>
+                </div>
+            </div>
+			
+        </ion-scroll>
+		
+		<ion-scroll direction="x" class="noScroll" id="div3" scrollbar-x="false">
+		
+            <div class="row">
+			
+                <div class="divOffre col col-75"><a class="lienAnnonce" href="#/annonce">
+                    <div class="row">
+                        <div class="col col-90"><p>Conseiller (mes candidatures)</br><span class="opaGris">Poste basé à Lille</span></p></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+					</div>	</a>
+                </div>
+				
+				 <div class="divOffre col col-75"><a class="lienAnnonce" href="#/annonce">
+                    <div class="row">
+                        <div class="col col-90"><p>Conseiller (mes candidatures)</br><span class="opaGris">Poste basé à Lille</span></p></div>
+						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
+					</div>	</a>
+                </div>
+            </div>
+			
+        </ion-scroll>
+		
+		
+
+		<div class="row test">
+		
+			<label class="item-input zoneRecherche">
+			
+			<div class="col-80">
 			  <input type="text" placeholder="Je recherche un job" ng-model="search">
 			</div> 
-			
+			<div class="col col-10">
 			<button class="button button-icon icon ion-mic-a"></button>
+			</div> 
+			<div class="col col-10">
 			<button class="button button-icon icon ion-search"></button>
+			</div> 
 
 		  </label>
 		  
@@ -58,9 +108,9 @@
 			</div>
 			
 			<div class="col col-90">
-				<button class="button button-block BtnAcc ">
-				  ACCEDER A TOUTES LES OFFRES <span class="nbAnnonce">25</span>
-				</button>
+				
+				  <a class="button button-block BtnViolet " href="#/toutesLesAnnonces">ACCEDER A TOUTES LES OFFRES <span class="nbAnnonce">25</span></a>
+				
 			</div>
 			
 			<div class="col col-5">
@@ -103,6 +153,23 @@
 			</p>
 		
 		</div>
+
+		<ion-slide-box on-slide-changed="slideHasChanged($index)">
+		  <ion-slide>
+		    <div><center><img class="caroustyle" src="../img/ionic.png"></center></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div><center><img class="caroustyle" src="../img/imgAnnonce.png"></center></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div><center><img class="caroustyle" src="../img/smiley.png"></center></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div><center><img class="caroustyle" src="../img/smiley.png"></center></div>
+		  </ion-slide>
+		</ion-slide-box>
+
+
 
 	</ion-content>
 	
