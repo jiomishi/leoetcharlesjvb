@@ -43,21 +43,20 @@
 	
   </head>
   
-  <body ng-app="starter">
+	<body ng-app="starter">
  
-    <ion-header-bar align-title="center" class="bar bar-header mynavbar" ng-controller="MyController">
-	
-		<div class="img-with-text">
-			<img class="icon-Socmne" src="img/icon.jpg">
-			<button class="button button-navbar button-icon ion-ios-arrow-left"></button>
-		</div>
-		
-		<p class="title">Bienvenue</p>
-		<button class="button button-navbar2 button-icon ion-navicon" ng-click="modal.show()"></button>
-		
-	</ion-header-bar>
+		<ion-nav-bar class="mynavbar" align-title="center" ng-controller="MyController">
+			
+			<ion-nav-back-button side="left" class="button button-navbar button-icon ion-ios-arrow-left" ng-controllers="ChatDetailCtrl">	
+			</ion-nav-back-button>
+			<ion-nav-buttons side="right" >
+				<button  class="button button-navbar2 button-icon ion-navicon" ng-click="modal.show()">
+				</button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
   
     <ion-nav-view>
+		
 		<div id="shadowing"></div>
 	</ion-nav-view>
   

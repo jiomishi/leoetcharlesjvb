@@ -58,6 +58,8 @@ angular.module('starter.controllers', [])
 })
 */
 
+
+
 .controller('MailCtrl', function($scope) {
 
     $scope.sendMail= function() {
