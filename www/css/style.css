@@ -101,6 +101,16 @@ padding-left:5%;
 	color:black;
 }
 
+.longTxt{
+	height: 50px;
+	/*text-transform: capitalize;*/
+
+}
+
+.rechercheVide{
+	padding-top: 10px;
+}
+
 /*Boutons voir toutes les offres*/
 .btnToutesOffres{
 	width:80%;
@@ -523,6 +533,15 @@ display:none;}
   z-index:10;
   opacity:0.5;
   filter: alpha(opacity=50);
+}
+
+/*Titre de la page précédente caché*/
+.back-button > .back-text > .previous-title {
+    display:none;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
 }
 
 

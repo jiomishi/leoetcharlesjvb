@@ -1,9 +1,9 @@
 <ion-view class="title" view-title="Annonce">
 	
-	<ion-content class="has-header has-subheader gris" ng-controller="changer">
- 
+	<ion-content class="has-header has-subheader gris"  ng-controller="changer">
+	<div ng-controller="AnnonceCtrl">
 		<div class="row">
-			<h5 class="titre">Conseiller Client Particulier</h5>
+			<h5 class="titre">{{annonce.Intitule}}</h5>
 		</div>
 		
 		<div class="row row-center">
@@ -16,21 +16,124 @@
 		
 		<div class="divDetOffre">
 			<div class="row">
-				<a onclick="masquer_div('voirDetail','barre');"><img class="icon-Socmne" src="img/detail-button.png" /></a>
+				<a onclick="masquer_div('voirDetail','barre'); traductionWS('Intitule'); traductionWS('NiveauxExperience'); traductionWS('NiveauxFormation'); traductionWS('Localisation'); traductionWS('DatePublication'); traductionWS('DateLimite'); traductionWS('NatureContrat'); traductionWS('DescriptifSociete'); traductionWS('MissionPrincipale'); traductionWS('ActivitesTaches'); traductionWS('ConnaissancesCompetences'); traductionWS('Savoirs'); traductionWS('CertificationsAccreditations'); traductionWS('InformationsComplementaires'); traductionWS('IdResponsableRH');"><img class="icon-Socmne" src="img/detail-button.png" /></a>
 				<h5 class="detailOffre">Détails de l'offre</h5>
 			</div>
 			
 			<hr id="barre"/>
 			
 			<div id="voirDetail">
-			   Mission Principale </br>
-			   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras erat lorem, tincidunt eu porta posuere, volutpat in sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque sit amet consectetur ligula, ac ullamcorper magna. Sed mi massa, pretium id enim quis, feugiat aliquet mi. Phasellus pharetra ex eu magna posuere suscipit. Integer dignissim dictum ante. Morbi lacinia enim id ante faucibus, sollicitudin suscipit magna posuere.</br></br>
-			   Etiam quis mauris vel sapien tempus molestie sit amet vel libero. In tempor viverra mauris, nec pulvinar magna laoreet id. Sed cursus libero turpis, nec pellentesque ante lacinia vel. Vivamus vestibulum, lacus ac ornare fringilla, tellus tellus semper odio, at gravida sapien leo eu lorem. Cras rutrum dolor nec nunc luctus, porttitor tristique nibh consequat. Vivamus pharetra nunc suscipit fermentum fringilla. Morbi arcu velit, tincidunt ultricies odio ut, mattis vehicula neque. Duis in arcu eros. Morbi consequat auctor metus, eget blandit elit hendrerit et. Quisque a neque nulla. Nullam in mauris euismod, porta neque at, lobortis nisi. Proin nec metus congue, faucibus arcu sed, pharetra nisi. Nullam faucibus, nisl id condimentum ultricies, nulla metus tempor diam, et venenatis dui ex sed massa. Donec mattis bibendum nunc, at gravida ipsum malesuada vitae. In nec velit sit amet lorem ullamcorper accumsan. Nulla elit lectus, finibus a sapien ac, euismod vehicula justo.
+			
+				<p>Intitulé:</p>
+
+				<p id="Intitule">
+				</br>
+				{{Intitule}}</p>
+				</br>
+
+				<p>Niveau Experience:</p>
+
+				<p id="NiveauxExperience">
+				</br>
+				{{NiveauxExperience}}</p>
+				</br>
+				
+				<p>Niveau Formation:</p>
+
+				<p id="NiveauxFormation">
+				</br>
+				{{NiveauxFormation}}</p>
+				</br>
+				
+				<p>Localisation:</p>
+				
+				<p id="Localisation">
+				</br>
+				{{Localisation}}</p>
+				</br>
+				
+				<p>Date publication:</p>
+
+				<p id="DatePublication">
+				</br>
+				{{DatePublication}}</p>
+				</br>
+
+				<p>Date limite:</p>
+
+				<p id="DateLimite">
+				</br>
+				{{DateLimite}}</p>
+				</br>
+				
+				<p>Nature du contrat:</p>
+				
+				<p id="NatureContrat">
+				</br>
+				{{NatureContrat}}</p>
+				</br>
+				
+				<p>Descriptif Societe:
+
+				<p id="DescriptifSociete">
+				</br>
+				{{DescriptifSociete}}</p>
+				</br>
+				
+				<p>Mission Principale:</p>
+				
+				<p id="MissionPrincipale">
+				</br>
+				{{MissionPrincipale}}</p>
+				</br>
+				
+				<p>Activités/Tâches:</p>
+				
+				<p id="ActivitesTaches">
+				</br>
+				{{ActivitesTaches}}</p>
+				</br>
+
+				<p>Connaissance/Compétences/Savoirs:
+				
+				<p id="ConnaissancesCompetences">
+				</br>
+				{{ConnaissancesCompetences}}</p>
+				</br>
+
+				<p>Savoirs:
+				
+				<p id="Savoirs">
+				</br>
+				{{Savoirs}}</p>
+				</br>
+				
+				<p>Certifications et Accreditations:</p>
+
+				<p id="CertificationsAccreditations">
+				</br>
+				{{CertificationsAccreditations}}</p>
+				</br>
+				
+				<p>Infos Complémentaires:</p>
+
+				<p id="InformationsComplementaires">
+				</br>
+				{{InformationsComplementaires}}</p>
+				</br>
+				
+				<p>(IdResponsableRH)</p>
+				
+				<p id="IdResponsableRH">
+				</br>
+				{{IdResponsableRH}}</p>
+				</br>
+
 			</div>
 			
-			<div class="row">
+			<div class="row" ng-controller="shareCtrl">
 
-				<a class="lienOption" href="#">
+				<a class="lienOption" href="">
 					
 					<div class="optionAcc">
 						<img class="icon-Socmne imgNonActif" src="img/sauvgarde-button.png" />
@@ -39,15 +142,15 @@
 					</div>
 				</a>
 				
-				<a class="lienOption" href="#">
-					<div class="optionAcc">
+				<a class="lienOption" href="" ng-click="partager()">
+					<div class="optionAcc" >
 						<img class="icon-Socmne imgNonActif" src="img/partage-button.png" />
 						<img class="icon-Socmne imgActif" src="img/partage-button-active.png" />
 						<p>Partager</p>
 					</div>
 				</a>
 				
-				<a class="lienOption" href="#/postuler">
+				<a class="lienOption" href="#/postuler" >
 					
 					<div class="optionAcc">
 						<img class="icon-Socmne imgNonActif" src="img/postuler-button.png" />
@@ -125,6 +228,7 @@
 			<h5 class="travCmne">Travailler au Crédit Mutuel Nord Europe</h5>
 		</div>
 
+		</div>
 	</ion-content>
 	
 </ion-view>

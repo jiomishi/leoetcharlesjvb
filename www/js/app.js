@@ -87,7 +87,7 @@ CMNEApp.config(function($ionicConfigProvider) {
   })
   
 .state('annonce', {
-      url: '/annonce',
+      url: '/annonce/:IdAnnonce',
       templateUrl: 'views/annonce.html'
     })
 	
@@ -96,7 +96,7 @@ CMNEApp.config(function($ionicConfigProvider) {
       templateUrl: 'views/testWS.html'
     })
 
-  .state('toutesLesAnnonces', {
+  .state('toutesLesAnnonces/:Recherche', {
       url: '/toutesLesAnnonces',
       templateUrl: 'views/toutesLesAnnonces.html'
     })

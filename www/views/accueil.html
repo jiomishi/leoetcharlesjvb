@@ -1,6 +1,6 @@
 
 
-<ion-view class="title" view-title="Bienvenu">
+<ion-view class="title" view-title="Bienvenue ">
 
 	<ion-content class="has-header has-subheader gris" ng-controller="changerAccueil">
 		<div class="row">
@@ -13,30 +13,16 @@
 		
 		<ion-scroll direction="x" class="noScroll" id="div1" scrollbar-x="false">
 		
-            <div class="row">
+            <div class="row" ng-controller="AnnoncesCtrl">
 			
-                <div class="divOffre col col-75"><a class="lienAnnonce" href="#/annonce">
+                <div class="divOffre col col-75" ng-repeat="annonce in annonces | limitTo: 5"><a class="lienAnnonce" href="#/annonce/{{annonce.IdAnnonce}}" >
                     <div class="row">
-                        <div class="col col-90"><p>Conseiller Client Particulier</br><span class="opaGris">Poste basé à Lille</span></p></div>
+                        <div class="col col-90"><p class="longTxt">{{annonce.Intitule}}</br><span class="opaGris">Poste basé à {{annonce.Localisation}}</span></p></div>
 						<div class="col"><i class="icon ion-chevron-right opaGris test"></i></div>
 					</div>	</a>
                 </div>
-				
-				<div class="divOffre col col-75">
-                    <div class="row">
-                        <div class="col col-90"><p>Conseiller Gestion</br><span class="opaGris">Poste basé à Lens</span></p></div>
-						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
-                    </div>
-                </div>
-				
-				<div class="divOffre col col-75">
-                    <div class="row">
-                        <div class="col col-90"><p>Conseiller Autre</br><span class="opaGris">Poste basé à Douai</span></p></div>
-						<div class="col"><i class="icon ion-chevron-right opaGris"></i></div>
-                    </div>
-                </div>
-				
             </div>
+        
 			
         </ion-scroll>
 		
@@ -95,7 +81,7 @@
 			<button class="button button-icon icon ion-mic-a"></button>
 			</div> 
 			<div class="col col-10">
-			<button class="button button-icon icon ion-search"></button>
+			<a href="#/toutesLesAnnonces/{{Recherche}}"><button class="button button-icon icon ion-search"></button></a>
 			</div> 
 
 		  </label>
@@ -107,9 +93,9 @@
 			<div class="col col-5">
 			</div>
 			
-			<div class="col col-90">
+			<div class="col col-90" ng-controller="AnnoncesCtrl">
 				
-				  <a class="button button-block BtnViolet " href="#/toutesLesAnnonces">ACCEDER A TOUTES LES OFFRES <span class="nbAnnonce">25</span></a>
+				  <a class="button button-block BtnViolet " href="#/toutesLesAnnonces">ACCEDER A TOUTES LES OFFRES <span class="nbAnnonce">{{nombresAnnonces}}</span></a>
 				
 			</div>
 			

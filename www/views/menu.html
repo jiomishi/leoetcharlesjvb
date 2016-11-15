@@ -1,8 +1,7 @@
 
 <ion-modal-view class="has-header configModal">
+
    <ion-content class="contenuModal ">
-   
-    
 		 
 	<div class="row">
 		<button class = "button button-icon icon-left ion-ios-close-outline"
@@ -13,26 +12,16 @@
 	<div class="row">
 		<hr class="hrbarre"/>
 	</div>
-		
-
 	
 	<div class="row">
-			<ul>
-				<a href="#/accueil" ng-click = "closeModal()"><li>Accueil</li></a>
-				<a href="#/annonce" ng-click = "closeModal()"><li>Annonces</li></a>
-				<a href="#/postuler" ng-click = "closeModal()"><li>Postuler</li></a>
-				<a href="#/testWS" ng-click = "closeModal()"><li>Test de Webservice</li></a>
-			</ul>
-	</div>
-
-	<div ng-controller="MailCtrl">
-		
-		
-        <button class="button button-block button-royal item-icon-left" ng-click="sendMail()">
-             <i class="icon ion-android-share-alt"></i>
-              send Mail
-      </button>
+		<ul>
+			<a href="#/accueil" ng-click = "closeModal()"><li>Accueil</li></a>
+			<a href="#/postuler" ng-click = "closeModal()"><li>Postuler</li></a>
+			<a href="#/testWS" ng-click = "closeModal()"><li>Test de Webservice</li></a>
+			<a href="#/toutesLesAnnonces" ng-click = "closeModal()"><li>Toutes les Annonces</li></a>
+		</ul>
 	</div>
 
    </ion-content>
+   
 </ion-modal-view>

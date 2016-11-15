@@ -2,24 +2,7 @@
 	
 	<ion-content class="has-header has-subheader gris">
 
-	<h3 style="text-align:center;">Annonces (Test Webservice)</h3>
-
-		<div ng-controller="AnnoncesCtrl">
-            
-			<ul class="list" >
-				<li class="item" ng-repeat="annonce in annonces">{{annonce.id}} {{annonce.nom}} {{annonce.description}}</li>
-			</ul>
-
-        </div>
-		
-		<p></br>Recupération avec id:</br></p>
-		<div ng-controller="AnnonceCtrl">
-            
-			<ul class="list" >
-				<li class="item">{{annonce.id}} {{annonce.nom}} {{annonce.description}}</li>
-			</ul>
-
-        </div>
+	<h3 style="text-align:center;">TESTS</h3>
 		
 		<div ng-controller="HomeCtrl">
 			<p></br></br>Données prises a partir de : http://lesovalies-projetovalies.rhcloud.com/service/association</p>
@@ -27,43 +10,6 @@
 			<p>Ici nouveau test :</p>
 			<p>{{message}}</p>
 		</div>
-
-		<div class="card" ng-controller="shareCtrl">
-	  		<div class="item item-divider">
-	  			<b> Share this app</b>
-	  		</div>
-	     <ul class="list">
-	       <li class="item" id="displayLabel">
-	      <div class="item item-text-wrap">
-	        <button class="button button-block button-royal item-icon-left" ng-click="whatsappShare()">
-	            <i class="icon ion-social-whatsapp"></i>
-	              WhatsApp
-	      </button>
-	      </li>
-	 
-	    <ul class="list">
-	       <li class="item" id="displayLabel">
-	      <div class="item item-text-wrap">
-	        <button class="button button-block button-royal item-icon-left" ng-click="twitterShare()">
-	            <i class="icon ion-social-twitter"></i>
-	              twitter
-	      </button>
-	      </li>
-	 
-	 
-	      <li class="item" id="displayLabel">
-	      <div class="item item-text-wrap">
-	        <button class="button button-block button-royal item-icon-left" ng-click="OtherShare()">
-	             <i class="icon ion-android-share-alt"></i>
-	              Other
-	      </button>
-	      </li>
-	    </ul>
-	 	
-	 		
-				
-	  		</div>
-	</div>
 
 	</ion-content>
 	
