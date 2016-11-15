@@ -545,7 +545,16 @@ display:none;}
 }
 
 
+.divDetOffre ul{
+list-style-type: circle;
+padding: 0%;
+}
 
+.divDetOffre li{
+
+	margin-top: 0px;
+
+}
 
 
 

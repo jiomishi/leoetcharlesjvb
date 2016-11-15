@@ -324,6 +324,9 @@ function decodeHtml(html) {
     return txt.value;
 }
 
+function test(id){
+	document.getElementById(id).innerHTML =document.getElementById(id).textContent
+}
 function traductionWS(id) {
 	
 	var find = "</p>";
