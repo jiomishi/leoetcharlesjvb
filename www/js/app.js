@@ -45,6 +45,30 @@ CMNEApp.config(function($ionicConfigProvider) {
   });
 })
 
+.controller("MailgunController", function($scope, $http) {
+ 
+    var mailgunUrl = "sandboxdbeb402b833c42619487fbce8e2a8850.mailgun.org";
+    var mailgunApiKey = window.btoa("api:key-0c233689883f37926dbc2f8e118393d0")
+ 
+    $scope.send = function(recipient, subject, message) {
+        $http(
+            {
+                "method": "POST",
+                "url": "https://api.mailgun.net/v3/" + mailgunUrl + "/messages",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": "Basic " + mailgunApiKey
+                },
+                data: "from=" + "c.m.candidat.mobile@gmail.com" + "&to=" + "c.m.recrute.mobile@gmail.com" + "&subject=" + "test" + "&text=" + "test"
+            }
+        ).then(function(success) {
+            console.log("SUCCESS " + JSON.stringify(success));
+        }, function(error) {
+            console.log("ERROR " + JSON.stringify(error));
+        });
+    }
+ 
+})
 
 /*
 
@@ -96,8 +120,8 @@ CMNEApp.config(function($ionicConfigProvider) {
       templateUrl: 'views/testWS.html'
     })
 
-  .state('toutesLesAnnonces/:Recherche', {
-      url: '/toutesLesAnnonces',
+  .state('toutesLesAnnonces', {
+      url: '/toutesLesAnnonces/:recherche',
       templateUrl: 'views/toutesLesAnnonces.html'
     })
 

@@ -1,16 +1,15 @@
 <ion-view class="title" view-title="Toutes les Annonces">
 
-	<ion-content class="has-header has-subheader gris">
+	<ion-content class="has-header has-subheader gris" ng-controller="AnnoncesCtrl">
 
 		<div class="bar bar-header item-input-inset">
 		  <label class="item-input-wrapper">
 			<i class="icon ion-ios-search placeholder-icon"></i>
 			<input type="search" ng-model="q" placeholder="Rechercher dans les annonces..." aria-label="filter annonces" />
 		  </label>
-
+			
 		</div>
-
-		<div ng-controller="AnnoncesCtrl">
+		<div >
 				
 				<ul class="list" >
 					<li class="item" ng-repeat="annonce in annonces | filter:q as results">

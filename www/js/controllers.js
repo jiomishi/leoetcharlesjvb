@@ -6,7 +6,10 @@ angular.module('starter.controllers', [])
 	annoncesService.getAnnonces().then(function(annonces){
 		$scope.annonces = annonces.data;
 		$scope.nombresAnnonces = annonces.data.length;
+
 	});
+	
+	$scope.q=$stateParams.recherche;
 	
 })
 
@@ -327,7 +330,8 @@ function decodeHtml(html) {
 function test(id){
 	document.getElementById(id).innerHTML =document.getElementById(id).textContent
 }
-function traductionWS(id) {
+
+/*function traductionWS(id) {
 	
 	var find = "</p>";
 	var regex = new RegExp(find, "g");
@@ -400,4 +404,4 @@ function traductionWS(id) {
 	var find18 = '<span style="color:#1f497d; font-family:arial,sans-serif; font-size:11pt; line-height:115%; mso-ansi-language:FR; mso-bidi-language:AR-SA; mso-fareast-font-family:Calibri; mso-fareast-language:EN-US; mso-fareast-theme-font:minor-latin; mso-themecolor:text2">'
 	var regex18 = new RegExp(find18, "g");
 	document.getElementById(id).textContent = document.getElementById(id).textContent.replace(regex18,"");
-}
+}*/

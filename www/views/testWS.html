@@ -1,15 +1,32 @@
 <ion-view>
 	
-	<ion-content class="has-header has-subheader gris">
+	<ion-content class="has-header has-subheader gris " ng-controller="MailgunController">
 
 	<h3 style="text-align:center;">TESTS</h3>
 		
-		<div ng-controller="HomeCtrl">
+		<!--<div ng-controller="HomeCtrl">
 			<p></br></br>Données prises a partir de : http://lesovalies-projetovalies.rhcloud.com/service/association</p>
 			<p>L'extention de Chrome "CORS" est nécéssaire pour recupérer les données en local</p>
 			<p>Ici nouveau test :</p>
 			<p>{{message}}</p>
+		</div>-->
+		
+		  <div class="list">
+			<label class="item item-input">
+				<input type="text" placeholder="Recipient (To)" ng-model="recipient">
+			</label>
+			<label class="item item-input">
+				<input type="text" placeholder="Subject" ng-model="subject">
+			</label>
+			<label class="item item-input">
+				<textarea placeholder="Message" ng-model="message"></textarea>
+			</label>
 		</div>
+		<button class="button button-block button-positive" ng-click="send(recipient, subject, message)">
+			Send
+		</button>
+	
+	
 
 	</ion-content>
 	

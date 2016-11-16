@@ -16,7 +16,7 @@
 .zoneRecherche
 {
 padding-right:5%;
-width:100%;
+width:90%;
 padding-left:5%;
 }
 
@@ -99,12 +99,6 @@ padding-left:5%;
 .lienAnnonce{
 	text-decoration:none;
 	color:black;
-}
-
-.longTxt{
-	height: 50px;
-	/*text-transform: capitalize;*/
-
 }
 
 .rechercheVide{
@@ -197,6 +191,7 @@ input::-moz-placeholder {
 
 #voirDetail{
 	display:none;
+	text-align:justify;
 }
 
 #barre{
@@ -548,12 +543,18 @@ display:none;}
 .divDetOffre ul{
 list-style-type: circle;
 padding: 0%;
+
 }
 
 .divDetOffre li{
 
 	margin-top: 0px;
+	color:black;
 
+}
+
+.titreOffre{
+	font-weight:bold;
 }
 
 
